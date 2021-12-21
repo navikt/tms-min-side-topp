@@ -1,0 +1,83 @@
+{
+  "name": "tms-mikrofrontend-template",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "classnames": "2.3.1",
+    "express": "4.17.2",
+    "less": "4.1.2",
+    "nav-frontend-core": "6.0.1",
+    "nav-frontend-paneler": "3.0.1",
+    "nav-frontend-paneler-style": "2.0.1",
+    "nav-frontend-typografi": "4.0.1",
+    "nav-frontend-typografi-style": "2.0.1",
+    "prop-types": "15.7.2",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-query": "3.34.5"
+  },
+  "devDependencies": {
+    "@babel/preset-react": "7.16.5",
+    "@eik/rollup-plugin": "4.0.9",
+    "@rollup/plugin-babel": "5.3.0",
+    "@rollup/plugin-commonjs": "21.0.1",
+    "@rollup/plugin-json": "4.1.0",
+    "@rollup/plugin-node-resolve": "13.1.1",
+    "@rollup/plugin-replace": "3.0.0",
+    "@testing-library/jest-dom": "5.16.1",
+    "@testing-library/react": "12.1.2",
+    "@testing-library/user-event": "13.5.0",
+    "eslint-plugin-jsx-a11y": "6.5.1",
+    "husky": "7.0.0",
+    "lint-staged": "12.1.2",
+    "msw": "0.28.0",
+    "postcss": "8.4.5",
+    "prettier": "2.5.1",
+    "pretty-quick": "3.1.2",
+    "react-scripts": "5.0.0",
+    "rollup": "2.61.1",
+    "rollup-plugin-livereload": "2.0.5",
+    "rollup-plugin-postcss": "4.0.2",
+    "rollup-plugin-postcss-webpack-alias-less-loader": "1.0.0",
+    "rollup-plugin-serve": "1.1.0"
+  },
+  "scripts": {
+    "start": "rollup -c rollup.config.dev.js -w",
+    "build": "rollup -c rollup.config.prod.js",
+    "test": "npm run lint && react-scripts test",
+    "test-ci": "npm run lint && CI=true react-scripts test",
+    "refresh": "rm -rf node_modules && rm package-lock.json && npm i",
+    "lint": "eslint --ext .tsx,.js,.ts,.jsx src",
+    "bump": "npx npm-check-updates --target minor -u && npm i",
+    "pretty-quick": "pretty-quick --pattern \"**/*.*(js|jsx)\"",
+    "prepare": "husky install"
+  },
+  "eslintConfig": {
+    "plugins": [
+      "jsx-a11y"
+    ],
+    "extends": [
+      "react-app",
+      "react-app/jest",
+      "plugin:jsx-a11y/recommended"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "prettier": {
+    "printWidth": 120
+  },
+  "msw": {
+    "workerDirectory": "public"
+  }
+}
