@@ -1,4 +1,5 @@
 # tms-min-side-topp
+Mikrofrontend som trekkes inn av Min Side.
 
 ## Kom i gang
 1. Bygg tms-min-side-topp ved å kjøre npm run build
