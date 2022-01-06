@@ -1,13 +1,9 @@
-function getEnvironment() {
-  if (process.env.NODE_ENV === "production") {
-    return "production";
-  }
-  return "development";
-}
+import { getEnvironment } from "../utils/environment";
 
 const NAVN_URL = {
-  development: "https://www.nav.no/person/dittnav-api/personalia/navn",
-  production: "https://www.dev.nav.no/person/dittnav-api/personalia/navn",
+  local: "https://www.dev.nav.no/person/dittnav-api/navn",
+  development: "https://www.dev.nav.no/person/dittnav-api/navn",
+  production: "https://www.dev.nav.no/person/dittnav-api/navn",
 };
 
 export const navnUrl = NAVN_URL[getEnvironment()];

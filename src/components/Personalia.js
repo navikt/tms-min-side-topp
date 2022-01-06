@@ -1,13 +1,17 @@
 import React from "react";
+import { useQuery } from "react-query";
+import { navnUrl } from "../api/urls";
+import { fetcher } from "../api/api";
 import Panel from "nav-frontend-paneler";
 import "./Personalia.less";
 
-const Personalia = ({ navn }) => {
+const Personalia = () => {
+  const { data } = useQuery(navnUrl, fetcher);
+
   return (
     <div className="personalia">
       <Panel className="personalia__panel">
-        <h1>Hei, {navn}</h1>
-        <p>Dette kommer til å bli en awesome mikrofrontend! 😊🎉</p>
+        <h2>Dette kommer til å bli en awesome mikrofrontend! 😊🎉</h2>
       </Panel>
     </div>
   );
