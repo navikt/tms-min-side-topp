@@ -7,8 +7,8 @@ import json from "@rollup/plugin-json";
 import postcss from "rollup-plugin-postcss";
 import postcssLessLoader from "rollup-plugin-postcss-webpack-alias-less-loader";
 
-const reactUrl = "https://asset-bucket-proxy.dev.intern.nav.no/react-17.esm.js";
-const reactDomUrl = "https://asset-bucket-proxy.dev.intern.nav.no/react-dom-17.esm.js";
+const reactUrl = "https://cdn.skypack.dev/react";
+const reactDomUrl = "https://cdn.skypack.dev/react-dom";
 
 const imports = {
   react: reactUrl,
@@ -45,7 +45,7 @@ export default {
     }),
   ],
   output: {
-    file: "dist/bundle.esm.js",
+    file: "dist/bundle.js",
     format: "esm",
   },
 };

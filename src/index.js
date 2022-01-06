@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { QueryClient, QueryClientProvider } from "react-query";
 import App from "./App";
 import "./index.less";
 
@@ -15,9 +14,7 @@ if (process.env.NODE_ENV === "development") {
 
 ReactDOM.render(
   <React.StrictMode>
-    <QueryClientProvider client={new QueryClient()}>
-      <App />
-    </QueryClientProvider>
+    <App />
   </React.StrictMode>,
-  document.getElementById("mikrofrontend")
+  document.getElementById("tms-min-side-topp")
 );
