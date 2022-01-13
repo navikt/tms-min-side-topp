@@ -4,7 +4,11 @@ const path = require("path");
 const basePath = "/tms-min-side-topp";
 const buildPath = path.resolve(__dirname, "../dist");
 const server = express();
-const corsAllowedOrigin = process.env.CORS_ALLOWED_ORIGIN || "http://localhost:4000";
+const corsAllowedOrigin = process.env.CORS_ALLOWED_ORIGIN || [
+  "http://localhost:3000",
+  "http://localhost:4000",
+  "http://localhost:7150",
+];
 
 server.use(cors({ origin: corsAllowedOrigin }));
 
