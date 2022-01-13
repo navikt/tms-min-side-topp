@@ -5,13 +5,13 @@ import "./App.less";
 
 const App = () => {
   return (
-    <QueryClientProvider client={new QueryClient()}>
-      <main className="main">
-        <div className="app">
+    <main className="main-topp">
+      <div className="app">
+        <QueryClientProvider client={new QueryClient()}>
           <Personalia />
-        </div>
-      </main>
-    </QueryClientProvider>
+        </QueryClientProvider>
+      </div>
+    </main>
   );
 };
 
