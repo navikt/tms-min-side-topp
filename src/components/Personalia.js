@@ -6,7 +6,7 @@ import Panel from "nav-frontend-paneler";
 import "./Personalia.less";
 
 const Personalia = () => {
-  const { data } = useQuery(navnUrl, fetcher);
+  const { data } = useQuery(navnUrl, fetcher, { retry: false });
 
   return (
     <div className="personalia">
