@@ -4,6 +4,7 @@ import Personalia from "./components/Personalia";
 import "./App.less";
 
 const App = ({ emitter }) => {
+  console.log(emitter);
   emitter.on("level", (level) => console.log(level));
 
   return (
