@@ -3,7 +3,9 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import Personalia from "./components/Personalia";
 import "./App.less";
 
-const App = () => {
+const App = ({ emitter }) => {
+  emitter.on("level", (level) => console.log(level));
+
   return (
     <main className="main-topp">
       <div className="app">
