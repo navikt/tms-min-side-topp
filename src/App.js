@@ -5,6 +5,8 @@ import "./App.less";
 
 const App = (props) => {
   console.log(props);
+
+  props.emitter.emitter("loaded", "loaded successfully");
   props.emitter.on("level", (level) => console.log(level));
 
   return (
