@@ -7,7 +7,10 @@ const App = (props) => {
   console.log(props);
 
   props.emitter.emit("loaded", "loaded successfully");
-  props.emitter.on("level", (level) => console.log(level));
+  props.emitter.on("level", (level) => {
+    console.log("Recieved level in min-side");
+    console.log(level);
+  });
 
   return (
     <main className="main-topp">
