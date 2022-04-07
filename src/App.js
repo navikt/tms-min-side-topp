@@ -6,7 +6,6 @@ import "./App.less";
 const App = (props) => {
   props.emitter.on("level", (level) => {
     console.log(`Recieved level in min-side-topp: ${level}`);
-    console.log(level);
   });
 
   props.emitter.emit("loaded", "loaded successfully");
