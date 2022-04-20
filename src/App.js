@@ -3,12 +3,7 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import Personalia from "./components/Personalia";
 import "./App.less";
 
-const App = (props) => {
-  console.log(props);
-
-  props.emitter.emit("loaded", "loaded successfully");
-  props.emitter.on("level", (level) => console.log(level));
-
+const App = () => {
   return (
     <main className="main-topp">
       <div className="app">
